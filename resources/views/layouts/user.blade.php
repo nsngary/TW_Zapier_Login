@@ -15,8 +15,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- 宋體字體設定 -->
+    <!-- Songti TC 為 macOS 系統字體，無需額外載入 -->
 
     <!-- Alpine.js -->
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -24,7 +24,7 @@
     <!-- Custom Styles -->
     <style>
         body {
-            font-family: 'Inter', system-ui, sans-serif;
+            font-family: 'Songti TC', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'FangSong', 'KaiTi', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', serif;
             background-color: #ffffff;
         }
         .app-hover {
@@ -51,6 +51,8 @@
             transition: transform 0.2s ease;
         }
     </style>
+
+    @stack('styles')
 </head>
 <body class="bg-white min-h-screen">
     {{-- 使用動態 Header 組件 --}}

@@ -252,7 +252,6 @@
     line-height: 1;
     letter-spacing: 0.025em;
     color: var(--color-header-text-primary, #201515);
-    font-family: "Degular Display", var(--zds-typography-heading-display, Helvetica), Helvetica, arial, sans-serif;
   }
 
   .dropdown-description {
@@ -314,7 +313,6 @@
     text-transform: uppercase;
     color: var(--color-header-text-disabled, #6f6765);
     margin-bottom: 1rem;
-    font-family: "Degular Display", var(--zds-typography-heading-display, Helvetica), Helvetica, arial, sans-serif;
   }
 
   .aside-heading {

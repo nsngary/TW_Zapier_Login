@@ -63,31 +63,24 @@ module.exports = {
         header: {
           bg: '#fbfaf8',
           border: '#ece9df',
-          text: {
-            primary: '#201515',
-            secondary: '#413735',
-            muted: '#574e4c',
-            disabled: '#6f6765',
-          },
-          link: {
-            hover: '#503ebd',
-            focus: '#695be8',
-          },
-          button: {
-            bg: '#ece9df',
-            hover: '#f5f3eb',
-          },
-          dropdown: {
-            bg: '#fffdf9',
-            overlay: '#2015151a',
-            indicator: '#b09a85',
-          }
+          'text-primary': '#201515',
+          'text-secondary': '#413735',
+          'text-muted': '#574e4c',
+          'text-disabled': '#6f6765',
+          'link-hover': '#503ebd',
+          'link-focus': '#695be8',
+          'button-bg': '#ece9df',
+          'button-hover': '#f5f3eb',
+          'dropdown-bg': '#fffdf9',
+          'dropdown-overlay': '#2015151a',
+          'dropdown-indicator': '#b09a85',
         }
       },
-      // 字體配置
+      // 字體配置 - 宋體為主
       fontFamily: {
-        'sans': ['Noto Sans TC', 'Inter', 'system-ui', 'sans-serif'],
-        'display': ['Noto Sans TC', 'Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Songti TC', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'FangSong', 'KaiTi', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'serif'],
+        'display': ['Songti TC', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'FangSong', 'KaiTi', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'serif'],
+        'serif': ['Songti TC', 'Songti SC', 'STSong', 'SimSun', 'NSimSun', 'FangSong', 'KaiTi', 'Microsoft YaHei', 'PingFang TC', 'PingFang SC', 'serif'],
       },
       // 間距配置
       spacing: {

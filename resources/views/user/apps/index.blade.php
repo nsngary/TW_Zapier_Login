@@ -4,35 +4,76 @@
 
 @section('content')
 <!-- Hero Section -->
-<div class="bg-gradient-to-br from-white to-gray-50 border-b border-gray-200">
+<div class="hero border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div class="text-center">
-            <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-accent-orange text-white mb-6 shadow-sm">
-                <i class="fas fa-bolt mr-2"></i>
-                自動化流程平台
+            <div class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-gray-100 text-white mb-6 shadow-sm">
+                    <svg 
+        class="block" 
+        width="104" 
+        height="28" 
+        viewBox="0 0 244 66" 
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+    >
+        <!-- z -->
+        <path
+        d="M57.1877 45.2253L57.1534 45.1166L78.809 25.2914V15.7391H44.0663V25.2914H64.8181L64.8524 25.3829L43.4084 45.2253V54.7775H79.1579V45.2253H57.1877Z"
+        fill="#86735E"
+        />
+        <!-- a -->
+        <path
+        d="M100.487 14.8297C96.4797 14.8297 93.2136 15.434 90.6892 16.6429C88.3376 17.6963 86.3568 19.4321 85.0036 21.6249C83.7091 23.8321 82.8962 26.2883 82.6184 28.832L93.1602 30.3135C93.5415 28.0674 94.3042 26.4754 95.4482 25.5373C96.7486 24.5562 98.3511 24.0605 99.9783 24.136C102.118 24.136 103.67 24.7079 104.634 25.8519C105.59 26.9959 106.076 28.5803 106.076 30.6681V31.7091H95.9401C90.7807 31.7091 87.0742 32.8531 84.8206 35.1411C82.5669 37.429 81.442 40.4492 81.4458 44.2014C81.4458 48.0452 82.5707 50.9052 84.8206 52.7813C87.0704 54.6574 89.8999 55.5897 93.3089 55.5783C97.5379 55.5783 100.791 54.1235 103.067 51.214C104.412 49.426 105.372 47.3793 105.887 45.2024H106.27L107.723 54.7546H117.275V30.5651C117.275 25.5659 115.958 21.6936 113.323 18.948C110.688 16.2024 106.409 14.8297 100.487 14.8297ZM103.828 44.6475C102.312 45.9116 100.327 46.5408 97.8562 46.5408C95.8199 46.5408 94.4052 46.1843 93.6121 45.4712C93.2256 45.1338 92.9182 44.7155 92.7116 44.246C92.505 43.7764 92.4043 43.2671 92.4166 42.7543C92.3941 42.2706 92.4702 41.7874 92.6403 41.3341C92.8104 40.8808 93.071 40.4668 93.4062 40.1174C93.7687 39.7774 94.1964 39.5145 94.6633 39.3444C95.1303 39.1743 95.6269 39.1006 96.1231 39.1278H106.093V39.7856C106.113 40.7154 105.919 41.6374 105.527 42.4804C105.134 43.3234 104.553 44.0649 103.828 44.6475Z"
+        fill="#86735E"
+        />
+        <!-- p -->
+        <path
+        d="M146.201 14.6695C142.357 14.6695 139.268 15.8764 136.935 18.2902C135.207 20.0786 133.939 22.7479 133.131 26.2981H132.771L131.295 15.7563H121.657V66H132.942V45.3054H133.354C133.698 46.6852 134.181 48.0267 134.795 49.3093C135.75 51.3986 137.316 53.1496 139.286 54.3314C141.328 55.446 143.629 56.0005 145.955 55.9387C150.68 55.9387 154.277 54.0988 156.748 50.419C159.219 46.7392 160.455 41.6046 160.455 35.0153C160.455 28.6509 159.259 23.6689 156.869 20.0691C154.478 16.4694 150.922 14.6695 146.201 14.6695ZM147.345 42.9602C146.029 44.8668 143.97 45.8201 141.167 45.8201C140.012 45.8735 138.86 45.6507 137.808 45.1703C136.755 44.6898 135.832 43.9656 135.116 43.0574C133.655 41.2233 132.927 38.7122 132.931 35.5243V34.7807C132.931 31.5432 133.659 29.0646 135.116 27.3448C136.572 25.625 138.59 24.7747 141.167 24.7937C144.02 24.7937 146.092 25.6994 147.385 27.5107C148.678 29.322 149.324 31.8483 149.324 35.0896C149.332 38.4414 148.676 41.065 147.356 42.9602H147.345Z"
+        fill="#86735E"
+        />
+        <!-- i 身-->
+        <path d="M175.035 15.7391H163.75V54.7833H175.035V15.7391Z" fill="#86735E" />
+        <!-- i 頭 -->
+        <path
+        d="M169.515 0.00366253C168.666 -0.0252113 167.82 0.116874 167.027 0.421484C166.234 0.726094 165.511 1.187 164.899 1.77682C164.297 2.3723 163.824 3.08658 163.512 3.87431C163.2 4.66204 163.055 5.50601 163.086 6.35275C163.056 7.20497 163.201 8.05433 163.514 8.84781C163.826 9.64129 164.299 10.3619 164.902 10.9646C165.505 11.5673 166.226 12.0392 167.02 12.3509C167.814 12.6626 168.663 12.8074 169.515 12.7762C170.362 12.8082 171.206 12.6635 171.994 12.3514C172.782 12.0392 173.496 11.5664 174.091 10.963C174.682 10.3534 175.142 9.63077 175.446 8.83849C175.75 8.04621 175.89 7.20067 175.859 6.35275C175.898 5.50985 175.761 4.66806 175.456 3.88115C175.151 3.09424 174.686 2.37951 174.09 1.78258C173.493 1.18565 172.779 0.719644 171.992 0.414327C171.206 0.109011 170.364 -0.0288946 169.521 0.00938803L169.515 0.00366253Z"
+        fill="#86735E"
+        />
+        <!-- e -->
+        <path
+        d="M208.473 17.0147C205.839 15.4474 202.515 14.6657 198.504 14.6695C192.189 14.6695 187.247 16.4675 183.678 20.0634C180.108 23.6593 178.324 28.6166 178.324 34.9352C178.233 38.7553 179.067 42.5407 180.755 45.9689C182.3 49.0238 184.706 51.5592 187.676 53.2618C190.665 54.9892 194.221 55.8548 198.344 55.8586C201.909 55.8586 204.887 55.3095 207.278 54.2113C209.526 53.225 211.483 51.6791 212.964 49.7211C214.373 47.7991 215.42 45.6359 216.052 43.3377L206.329 40.615C205.919 42.1094 205.131 43.4728 204.041 44.5732C202.942 45.6714 201.102 46.2206 198.521 46.2206C195.451 46.2206 193.163 45.3416 191.657 43.5837C190.564 42.3139 189.878 40.5006 189.575 38.1498H216.201C216.31 37.0515 216.367 36.1306 216.367 35.387V32.9561C216.431 29.6903 215.757 26.4522 214.394 23.4839C213.118 20.7799 211.054 18.5248 208.473 17.0147ZM198.178 23.9758C202.754 23.9758 205.348 26.2275 205.962 30.731H189.775C190.032 29.2284 190.655 27.8121 191.588 26.607C193.072 24.8491 195.268 23.972 198.178 23.9758Z"
+        fill="#86735E"
+        />
+        <!-- r -->
+        <path
+        d="M241.666 15.7391C238.478 15.7391 235.965 16.864 234.127 19.1139C232.808 20.7307 231.805 23.1197 231.119 26.2809H230.787L229.311 15.7391H219.673V54.7775H230.959V34.7578C230.959 32.2335 231.55 30.2982 232.732 28.9521C233.914 27.606 236.095 26.933 239.275 26.933H243.559V15.7391H241.666Z"
+        fill="#86735E"
+        />
+        <!-- _ -->
+        <path d="M39.0441 45.2253H0V54.789H39.0441V45.2253Z" fill="#A86F4B" />
+    </svg>
             </div>
             <h1 class="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-                連接您最愛的
-                <span class="text-accent-orange">應用程式</span>
+                Connect your apps
+                <p class="text-accent-orange">Automate your work</p>
             </h1>
             <p class="text-xl text-gray-600 mb-10 max-w-3xl mx-auto leading-relaxed">
                 從 <span class="font-semibold text-accent-orange">{{ $apps->total() }}</span> 個應用程式中選擇，建立強大的自動化工作流程，讓工作更有效率
             </p>
 
             <!-- Search Bar -->
-            <div class="max-w-2xl mx-auto">
+            <div class="max-w-2xl mx-auto rounded-xs">
                 <form method="GET" action="{{ route('user.apps.index') }}" class="relative">
-                    <div class="relative">
-                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <div class="search-container relative">
+                        <div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none z-10">
                             <i class="fas fa-search text-gray-400"></i>
                         </div>
                         <input type="text"
                                name="search"
                                value="{{ $search }}"
                                placeholder="搜尋應用程式..."
-                               class="w-full pl-12 pr-16 py-4 text-gray-900 bg-white border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-accent-orange focus:border-accent-orange text-lg shadow-sm">
+                               class="w-full pl-12 pr-16 py-4 text-gray-900 bg-white border border-gray-300 rounded-sm focus:outline-none focus:ring-2 focus:ring-accent-orange focus:border-accent-orange text-lg shadow-sm transition-all duration-300">
                         <button type="submit"
-                                class="absolute right-2 top-2 bg-accent-orange hover:bg-accent-brown text-white px-6 py-2 rounded-lg transition-all duration-200 hover:shadow-sm transform hover:scale-105">
+                                class="absolute right-2 top-2 bg-accent-orange hover:bg-accent-ball text-white px-6 py-2 rounded-sm transition-all duration-200 hover:shadow-sm transform hover:scale-105 z-10">
                             <i class="fas fa-arrow-right"></i>
                         </button>
                     </div>
@@ -43,14 +84,14 @@
 </div>
 
 <!-- Main Content with Sidebar -->
-<div class="bg-gray-50 min-h-screen">
+<div class="bg-header-bg min-h-screen">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="lg:grid lg:grid-cols-4 lg:gap-8">
             <!-- Accordion Sidebar -->
             <div class="lg:col-span-1 mb-8 lg:mb-0">
-                <div class="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+                <div class="bg-white border border-gray-200 rounded-sm overflow-hidden shadow-sm">
                     <!-- Sidebar Header -->
-                    <div class="px-6 py-5 bg-gradient-to-r from-accent-orange to-accent-brown">
+                    <div class="px-6 py-5 bg-gradient-to-r from-accent-orange to-accent-ball">
                         <h3 class="text-lg font-semibold text-white">應用程式分類</h3>
                         <p class="text-sm text-orange-100 mt-1">選擇分類來篩選應用程式</p>
                     </div>
@@ -65,7 +106,7 @@
                                 <i class="fas fa-th-large {{ (!$category || $category === 'all') ? 'text-white' : 'text-neutral-400' }}"></i>
                                 <span class="font-medium">全部應用程式</span>
                             </div>
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {{ (!$category || $category === 'all') ? 'bg-white bg-opacity-20 text-white' : 'bg-neutral-100 text-neutral-600' }}">
+                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {{ (!$category || $category === 'all') ? 'bg-white bg-opacity-20 text-neutral-700' : 'bg-neutral-100 text-neutral-600' }}">
                                 {{ $apps->total() }}
                             </span>
                         </a>
@@ -92,10 +133,10 @@
                                     data-target="category-{{ $loop->index }}">
                                 <div class="flex items-center space-x-3">
                                     <i class="{{ $categoryIcons[$cat] ?? 'fas fa-cube' }} {{ $category === $cat ? 'text-white' : 'text-neutral-400' }}"></i>
-                                    <span class="font-medium hover:text-accent-orange transition-colors">{{ $cat }}</span>
+                                    <span class="font-medium hover:text-primary-100 transition-colors">{{ $cat }}</span>
                                 </div>
                                 <div class="flex items-center space-x-2">
-                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {{ $category === $cat ? 'bg-white bg-opacity-20 text-white' : 'bg-neutral-100 text-neutral-600' }}">
+                                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium {{ $category === $cat ? 'bg-white bg-opacity-20 text-neutral-700' : 'bg-neutral-100 text-neutral-600' }}">
                                         {{ $categoryStats[$cat] ?? 0 }}
                                     </span>
                                     <i class="fas fa-chevron-down accordion-icon transition-transform duration-200 {{ $category === $cat ? 'text-white' : 'text-neutral-400' }}"></i>
@@ -152,9 +193,12 @@
         <!-- Apps Grid -->
         <div class="lg:col-span-3">
             @if($apps->count() > 0)
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             @foreach($apps as $app)
-                <div class="group bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                <div class="group bg-white border border-gray-200 rounded-xs shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden relative">
+                    <!-- Stretched Link -->
+                    <a href="{{ route('user.apps.show', $app->id) }}" class="stretched-link" aria-label="查看 {{ $app->name }} 詳情"></a>
+
                     <!-- App Icon -->
                     <div class="p-6 pb-4">
                         <div class="flex items-start space-x-4">
@@ -167,7 +211,7 @@
                                 </div>
                             @else
                                 <div class="flex-shrink-0">
-                                    <div class="w-14 h-14 bg-gradient-to-br from-accent-orange to-accent-brown rounded-xl flex items-center justify-center shadow-sm">
+                                    <div class="w-14 h-14 bg-gradient-to-br from-accent-orange to-accent-ball rounded-xl flex items-center justify-center shadow-sm">
                                         <i class="fas fa-cube text-white text-xl"></i>
                                     </div>
                                 </div>
@@ -209,16 +253,15 @@
                     <div class="px-6 py-4 bg-gray-50 border-t border-gray-100">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <a href="{{ route('user.apps.show', $app->id) }}"
-                                   class="inline-flex items-center px-4 py-2 bg-white hover:bg-gray-50 text-gray-700 text-sm font-medium border border-gray-300 hover:border-gray-400 rounded-lg transition-all duration-200 hover:shadow-sm">
+                                <span class="inline-flex items-center px-4 py-2 bg-white text-gray-700 text-sm font-medium border border-gray-300 rounded-lg">
                                     <i class="fas fa-info-circle mr-2 text-gray-400"></i>
                                     查看詳情
-                                </a>
+                                </span>
                             </div>
 
                             <a href="{{ route('user.apps.integrations', $app->id) }}"
                                target="_blank"
-                               class="inline-flex items-center px-4 py-2 bg-accent-orange hover:bg-accent-brown text-white text-sm font-medium rounded-lg transition-all duration-200 hover:shadow-sm transform hover:scale-105">
+                               class="inline-flex items-center px-4 py-2 bg-accent-orange hover:bg-accent-ball text-white text-sm font-medium rounded-lg transition-all duration-200 hover:shadow-sm transform hover:scale-105 relative z-10">
                                 <i class="fas fa-plug mr-2"></i>
                                 整合
                             </a>
@@ -264,16 +307,16 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             @foreach($categories->take(8) as $cat)
-                <a href="{{ route('user.apps.index', ['category' => $cat]) }}"
-                   class="group p-8 bg-white border border-gray-200 rounded-xl hover:border-accent-orange hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                <div class="group p-8 bg-white border border-gray-200 rounded-xl hover:border-accent-orange hover:shadow-lg transition-all duration-300 transform hover:scale-105 relative">
+                    <a href="{{ route('user.apps.index', ['category' => $cat]) }}" class="stretched-link" aria-label="查看 {{ $cat }} 分類"></a>
                     <div class="text-center">
-                        <div class="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-brown rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
+                        <div class="w-16 h-16 bg-gradient-to-br from-accent-orange to-accent-ball rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:shadow-lg transition-all duration-300">
                             <i class="fas fa-th-large text-white text-xl"></i>
                         </div>
                         <h3 class="text-lg font-semibold text-gray-900 mb-2 group-hover:text-accent-orange transition-colors duration-200">{{ $cat }}</h3>
                         <p class="text-sm text-gray-600">{{ $categoryStats[$cat] ?? 0 }} 個應用程式</p>
                     </div>
-                </a>
+                </div>
             @endforeach
         </div>
     </div>
@@ -283,6 +326,49 @@
 
 @push('styles')
 <style>
+    .hero {
+        background-image:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(134, 115, 94, 0.1) 100%),
+            url('https://res.cloudinary.com/zapier-media/image/upload/f_auto/q_auto/v1745435119/product-gallery-background_ed59bc.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    /* 確保文字在背景圖片上清晰可見 */
+    .hero .text-center {
+        position: relative;
+        z-index: 2;
+    }
+    /* Stretched Link Styles - Bootstrap-like */
+    .stretched-link::after {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        z-index: 1 !important;
+        content: "" !important;
+        pointer-events: auto !important;
+    }
+
+    /* Ensure parent container has relative positioning */
+    .relative {
+        position: relative !important;
+    }
+
+    /* Hover effects for stretched link cards */
+    .relative:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+
+    .relative {
+        transition: all 0.3s ease;
+    }
+
     /* Accordion Styles */
     .accordion-content {
         display: none !important;
@@ -339,8 +425,15 @@
     .accordion-item:hover .accordion-header.bg-accent-orange .inline-flex,
     .accordion-header.bg-accent-orange:hover i,
     .accordion-header.bg-accent-orange:hover .inline-flex {
-        background-color: #f97316 !important;
-        color: white !important;
+        /* background-color: #f97316 !important; */
+        /* color: white !important; */
+    }
+    .accordion-item:hover .accordion-header.bg-accent-orange i,
+    .accordion-item:hover .accordion-header.bg-accent-orange .inline-flex,
+    .accordion-header.bg-accent-orange i,
+    .accordion-header.bg-accent-orange .inline-flex {
+        background-color: rgba(249, 115, 22, 0) !important;
+        color: rgb(255, 255, 255) !important;
     }
 
     /* Active all-apps link hover - maintain orange background and white text */
@@ -356,7 +449,7 @@
 
     .all-apps-link.bg-accent-orange:hover i,
     .all-apps-link.bg-accent-orange:hover .inline-flex {
-        color: white !important;
+        /* color: white !important; */
     }
 
     /* Active category styling */
@@ -383,6 +476,64 @@
 
     .accordion-content.show > div {
         transform: translateY(0);
+    }
+
+    /* 改善手風琴項目的視覺層次 */
+    .accordion-item {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .accordion-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: transparent;
+        transition: background-color 0.3s ease;
+    }
+
+    .accordion-item:has(.accordion-header.bg-accent-orange)::before {
+        background: linear-gradient(to bottom, #C07F56, #bd743a);
+    }
+
+    /* 改善分類應用程式列表的樣式 */
+    .accordion-content .space-y-2 a:hover {
+        transform: translateX(4px);
+        transition: transform 0.2s ease;
+    }
+
+    /* 添加載入動畫 */
+    .accordion-content.show {
+        animation: accordionSlideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* 改善搜尋框樣式 */
+    .search-container {
+        position: relative;
+    }
+
+    .search-container::before {
+        content: '';
+        position: absolute;
+        inset: -2px;
+        background: linear-gradient(45deg, #C07F56, #bd743a);
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .search-container:focus-within::before {
+        opacity: 1;
+    }
+
+    .search-container input:focus {
+        border-color: transparent;
+        box-shadow: 0 0 0 2px rgba(192, 127, 86, 0.2);
     }
 </style>
 @endpush
@@ -522,8 +673,100 @@
             });
         });
 
-        // 不再自動展開任何分類，所有手風琴預設關閉
-        console.log('手風琴初始化完成 - 所有項目預設關閉');
+        // 根據 URL 參數自動展開對應分類
+        function autoExpandCategory() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+
+            if (categoryParam && categoryParam !== 'all') {
+                // 找到對應的手風琴項目
+                const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+                accordionHeaders.forEach((header, index) => {
+                    const categoryText = header.querySelector('span').textContent.trim();
+
+                    if (categoryText === categoryParam) {
+                        // 展開對應的分類
+                        const targetId = header.getAttribute('data-target');
+                        const content = document.getElementById(targetId);
+                        const icon = header.querySelector('.accordion-icon');
+
+                        if (content && icon) {
+                            // 顯示內容
+                            content.classList.add('show');
+                            content.style.display = 'block';
+
+                            // 旋轉圖標
+                            icon.classList.add('rotated');
+
+                            // 添加活動狀態
+                            header.classList.remove('text-neutral-700', 'hover:bg-gray-50');
+                            header.classList.add('bg-accent-orange', 'text-white');
+
+                            // 更新圖標顏色
+                            const icons = header.querySelectorAll('i:not(.accordion-icon)');
+                            icons.forEach(i => {
+                                i.classList.remove('text-neutral-400');
+                                i.classList.add('text-white');
+                            });
+
+                            // 更新徽章樣式
+                            const badge = header.querySelector('.inline-flex');
+                            if (badge) {
+                                badge.classList.remove('bg-neutral-100', 'text-neutral-600');
+                                badge.classList.add('bg-white', 'bg-opacity-20', 'text-white');
+                            }
+
+                            console.log(`自動展開分類: ${categoryParam}`);
+                        }
+                    }
+                });
+            }
+        }
+
+        // 執行自動展開
+        autoExpandCategory();
+
+        console.log('手風琴初始化完成 - 根據 URL 參數自動展開分類');
+
+        // Stretched-link 功能
+        function initStretchedLinks() {
+            const stretchedLinks = document.querySelectorAll('.stretched-link');
+
+            stretchedLinks.forEach(link => {
+                const parentCard = link.closest('.relative');
+                if (parentCard) {
+                    // 移除現有的點擊事件監聽器（如果有的話）
+                    parentCard.removeEventListener('click', parentCard._stretchedLinkHandler);
+
+                    // 創建新的點擊事件處理器
+                    const clickHandler = (event) => {
+                        // 檢查點擊的目標是否是整合按鈕或其子元素
+                        const integrationButton = event.target.closest('.z-10');
+                        if (integrationButton) {
+                            // 如果點擊的是整合按鈕，讓它正常處理
+                            return;
+                        }
+
+                        // 否則導航到 stretched-link 的 URL
+                        event.preventDefault();
+                        window.location.href = link.href;
+                    };
+
+                    // 添加點擊事件監聽器
+                    parentCard.addEventListener('click', clickHandler);
+                    parentCard._stretchedLinkHandler = clickHandler;
+
+                    // 添加 cursor pointer 樣式
+                    parentCard.style.cursor = 'pointer';
+                }
+            });
+
+            console.log(`已為 ${stretchedLinks.length} 個 stretched-link 添加點擊功能`);
+        }
+
+        // 初始化 stretched-link
+        initStretchedLinks();
     });
 </script>
 @endpush

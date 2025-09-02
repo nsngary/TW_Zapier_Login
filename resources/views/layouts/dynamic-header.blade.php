@@ -142,28 +142,268 @@ data-testid="header"
 
         @else
             {{-- User 介面導航 --}}
+            <!-- 產品下拉選單 -->
             <li>
-                <a class="nav-link" href="#" aria-label="產品">
-                    <span>產品</span>
-                </a>
+                <details data-testid="nav-dropdown" class="dropdown-container">
+                    <summary class="dropdown-summary" data-testid="nav-dropdown-summary">
+                        <span>產品</span>
+                        <span class="dropdown-indicator">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" size="16" aria-hidden="false" role="img" data-name="arrowSmallDown">
+                                <path d="M12 17.2999L19 11.4399V8.81995L12 14.6999L5 8.81995V11.4399L12 17.2999Z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <!-- 產品下拉選單內容 -->
+                    <div class="dropdown-panel">
+                        <div class="dropdown-main bg-header-dropdown-bg">
+                            <div class="dropdown-content">
+                                <div class="dropdown-header">
+                                    <div class="dropdown-heading">Zapier 自動化平台</div>
+                                    <p class="dropdown-description">無程式碼自動化，整合 7,000+ 應用程式</p>
+                                </div>
+                                <div class="dropdown-sections">
+                                    <div>
+                                        <div class="section-heading" id="products-submenu-heading-products">Products</div>
+                                        <ul class="section-list" aria-labelledby="products-submenu-heading-products">
+                                            <li class="section-item">
+                                                <a class="section-link" href="/workflows" aria-label="Zaps">
+                                                    <div class="section-icon bg-orange-50 text-primary-500">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M8.99996 23.66L20.54 9.90997H15V0.159973L3.45996 13.91H8.99996V23.66Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="section-label"><span>工作流程</span></div>
+                                                        <div class="section-desc">製作自己的自動化工作流</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/tables" aria-label="Tables">
+                                                    <div class="section-icon bg-orange-50 text-primary-500">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 2.9978H21.0022V7.49897H12V2.9978Z" fill="currentColor"></path>
+                                                            <path d="M12 7.49897L2.99756 7.4989V12.0001H11.9997L12 7.49897Z" fill="currentColor"></path>
+                                                            <path d="M11.9997 12.0001L21.0022 12V16.5012H12L11.9997 12.0001Z" fill="currentColor"></path>
+                                                            <path d="M2.99756 16.5011L12 16.5012L11.9997 21.0023H2.99756V16.5011Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="section-label"><span>資料庫</span></div>
+                                                        <div class="section-desc">為工作流程設計的資料庫</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/interfaces" aria-label="Interfaces">
+                                                    <div class="section-icon bg-orange-50 text-primary-500">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7.49989 7.50049V16.5001L16.4999 16.5001V21H3.00022L3 3H20.9999V16.5001L16.4999 16.5001L16.5 7.50049L7.49989 7.50049Z" fill="currentColor"></path>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="section-label"><span>介面</span></div>
+                                                        <div class="section-desc">自訂使用介面</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <div class="section-heading" id="products-submenu-heading-capabilities">Capabilities</div>
+                                        <ul class="section-list" aria-labelledby="products-submenu-heading-capabilities">
+                                            <li class="section-item">
+                                                <a class="section-link" href="{{ route('user.apps.index') }}" aria-label="App integrations">
+                                                    <div>
+                                                        <div class="section-label"><span>App 整合</span></div>
+                                                        <div class="section-desc">整合 7,000+ 應用程式</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/ai" aria-label="AI automation 🪄">
+                                                    <div>
+                                                        <div class="section-label"><span>AI agents 自動化 🪄</span></div>
+                                                        <div class="section-desc">善用AI升級工作流</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/security-compliance" aria-label="Security">
+                                                    <div>
+                                                        <div class="section-label"><span>安全性</span></div>
+                                                        <div class="section-desc">企業級安全</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="dropdown-footer">
+                                <ul class="footer-list">
+                                    <li>
+                                        <a class="footer-link" href="/templates">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.5898 13.59C13.9048 13.2754 14.1194 12.8745 14.2064 12.438C14.2934 12.0015 14.2491 11.5489 14.0788 11.1376C13.9086 10.7263 13.6202 10.3748 13.2502 10.1274C12.8801 9.88005 12.445 9.74802 11.9998 9.74802C11.5547 9.74802 11.1196 9.88005 10.7495 10.1274C10.3794 10.3748 10.0911 10.7263 9.92085 11.1376C9.75063 11.5489 9.70624 12.0015 9.79328 12.438C9.88033 12.8745 10.0949 13.2754 10.4098 13.59C10.8317 14.0113 11.4036 14.248 11.9998 14.248C12.5961 14.248 13.168 14.0113 13.5898 13.59ZM6.58984 6.59L3.77984 17L5.99984 16.35L8.19984 8.2L18.5898 5.41L15.7998 15.8L3.17984 19.18L2.58984 21.41L17.4398 17.41L21.4398 2.56L6.58984 6.59Z" fill="currentColor"></path>
+                                            </svg>
+                                            <span>探索模板</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="footer-link" href="/use-cases">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M22 6H17.47L14.95 3H9.05L6.53 6H2V8H20V14H13V12H11V14H4V10H2V21H22V6ZM9.14 6L9.98 5H14.01L14.85 6H9.14ZM20 19H4V16H11V17H13V16H20V19Z" fill="currentColor"></path>
+                                            </svg>
+                                            <span>探索使用案例</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <aside class="dropdown-aside">
+                            <div>
+                                <div class="aside-heading" id="products-submenu-heading-whats-new">新功能</div>
+                                <ul class="section-list" aria-labelledby="products-submenu-heading-whats-new">
+                                    <li class="section-item">
+                                        <a class="section-link" href="/canvas" aria-label="Canvas">
+                                            <div class="section-icon text-neutral-700">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M21 3H3V7.5H16.5V21H21V3Z" fill="currentColor"></path>
+                                                    <path d="M14.2498 11.9999C14.2498 13.2426 13.2424 14.25 11.9998 14.25C10.7572 14.25 9.74981 13.2426 9.74981 11.9999C9.74981 10.7573 10.7572 9.74993 11.9998 9.74993C13.2424 9.74993 14.2498 10.7573 14.2498 11.9999Z" fill="currentColor"></path>
+                                                    <path d="M9.74981 16.5001C9.74981 17.7427 8.74245 18.7501 7.49981 18.7501C6.25717 18.7501 5.24981 17.7427 5.24981 16.5001C5.24981 15.2574 6.25717 14.2501 7.49981 14.2501C8.74245 14.2501 9.74981 15.2574 9.74981 16.5001Z" fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                            <div>
+                                                <div class="section-label">
+                                                    <span>Canvas - 畫布</span>
+                                                    <span class="beta-tag">Beta</span>
+                                                </div>
+                                                <div class="section-desc">使用 AI 規劃和繪製您的工作流程</div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </aside>
+                    </div>
+                </details>
             </li>
+
+            <!-- 實現下拉選單 -->
             <li>
-                <a class="nav-link" href="#" aria-label="實現">
-                    <span>實現</span>
-                </a>
+                <details data-testid="nav-dropdown" class="dropdown-container">
+                    <summary class="dropdown-summary" data-testid="nav-dropdown-summary">
+                        <span>實現</span>
+                        <span class="dropdown-indicator">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" size="16" aria-hidden="false" role="img" data-name="arrowSmallDown">
+                                <path d="M12 17.2999L19 11.4399V8.81995L12 14.6999L5 8.81995V11.4399L12 17.2999Z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <!-- 實現下拉選單內容 -->
+                    <div class="dropdown-panel">
+                        <div class="dropdown-main">
+                            <div class="dropdown-content">
+                                <div class="dropdown-header">
+                                    <div class="dropdown-heading">實現自動化</div>
+                                    <p class="dropdown-description">探索各種方式來建立自動化工作流程</p>
+                                </div>
+                                <div class="dropdown-sections">
+                                    <div>
+                                        <div class="section-heading" id="implement-submenu-heading-by-team">依團隊分類</div>
+                                        <ul class="section-list" aria-labelledby="implement-submenu-heading-by-team">
+                                            <li class="section-item">
+                                                <a class="section-link" href="/solutions/marketing" aria-label="Marketing">
+                                                    <div>
+                                                        <div class="section-label"><span>行銷</span></div>
+                                                        <div class="section-desc">自動化行銷活動和潛在客戶管理</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/solutions/sales" aria-label="Sales">
+                                                    <div>
+                                                        <div class="section-label"><span>銷售</span></div>
+                                                        <div class="section-desc">簡化銷售流程和客戶關係管理</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/solutions/it" aria-label="IT">
+                                                    <div>
+                                                        <div class="section-label"><span>IT</span></div>
+                                                        <div class="section-desc">自動化 IT 工作流程和系統整合</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
             </li>
+
+            <!-- 資源下拉選單 -->
             <li>
-                <a class="nav-link" href="#" aria-label="資源">
-                    <span>資源</span>
-                </a>
+                <details data-testid="nav-dropdown" class="dropdown-container">
+                    <summary class="dropdown-summary" data-testid="nav-dropdown-summary">
+                        <span>資源</span>
+                        <span class="dropdown-indicator">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" size="16" aria-hidden="false" role="img" data-name="arrowSmallDown">
+                                <path d="M12 17.2999L19 11.4399V8.81995L12 14.6999L5 8.81995V11.4399L12 17.2999Z" fill="currentColor"></path>
+                            </svg>
+                        </span>
+                    </summary>
+                    <!-- 資源下拉選單內容 -->
+                    <div class="dropdown-panel">
+                        <div class="dropdown-main">
+                            <div class="dropdown-content">
+                                <div class="dropdown-header">
+                                    <div class="dropdown-heading">學習和支援</div>
+                                    <p class="dropdown-description">取得協助、學習新技能，並與社群連結</p>
+                                </div>
+                                <div class="dropdown-sections">
+                                    <div>
+                                        <div class="section-heading" id="resources-submenu-heading-learn">學習使用</div>
+                                        <ul class="section-list" aria-labelledby="resources-submenu-heading-learn">
+                                            <li class="section-item">
+                                                <a class="section-link" href="/learn" aria-label="Learn">
+                                                    <div>
+                                                        <div class="section-label"><span>學習中心</span></div>
+                                                        <div class="section-desc">課程和教學指南</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/help" aria-label="Help docs">
+                                                    <div>
+                                                        <div class="section-label"><span>說明文件</span></div>
+                                                        <div class="section-desc">詳細的產品文件</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
             </li>
+
+            <!-- 企業連結 -->
             <li>
-                <a class="nav-link" href="#" aria-label="企業">
+                <a class="nav-link" href="/enterprise" aria-label="Enterprise" data-testid="nav-link">
                     <span>企業</span>
                 </a>
             </li>
+
+            <!-- 定價連結 -->
             <li>
-                <a class="nav-link" href="/pricing" aria-label="定價">
+                <a class="nav-link" href="/pricing" aria-label="Pricing" data-testid="nav-link">
                     <span>定價</span>
                 </a>
             </li>
@@ -277,6 +517,11 @@ data-testid="header"
                 <span>探索</span>
                 </a>
             </li>
+            <li>
+                <a class="nav-link" href="/contact-sales" aria-label="聯絡銷售" data-testid="nav-link">
+                    <span>聯絡銷售</span>
+                </a>
+            </li>
             </ul>
         </nav>
         </div>
@@ -304,7 +549,33 @@ data-testid="header"
                                     <div>
                                         <ul class="section-list">
                                             <li class="section-item">
-                                                <a class="section-link" href="#">
+                                                <a class="section-link" href="/dashboard/cart">
+                                                    <div class="section-icon bg-blue-50 text-blue-600">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M7 4V2C7 1.45 7.45 1 8 1H16C16.55 1 17 1.45 17 2V4H20C20.55 4 21 4.45 21 5S20.55 6 20 6H19V19C19 20.1 18.1 21 17 21H7C5.9 21 5 20.1 5 19V6H4C3.45 6 3 5.55 3 5S3.45 4 4 4H7ZM9 3V4H15V3H9ZM7 6V19H17V6H7Z" fill="currentColor"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="section-label"><span>購物車</span></div>
+                                                        <div class="section-desc">查看購物車內容</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/dashboard/wishlist">
+                                                    <div class="section-icon bg-pink-50 text-pink-600">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="section-label"><span>心願清單</span></div>
+                                                        <div class="section-desc">管理收藏的應用程式</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/dashboard/profile">
                                                     <div class="section-icon bg-blue-50 text-blue-600">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" fill="currentColor"/>
@@ -317,7 +588,7 @@ data-testid="header"
                                                 </a>
                                             </li>
                                             <li class="section-item">
-                                                <a class="section-link" href="#">
+                                                <a class="section-link" href="/dashboard/settings">
                                                     <div class="section-icon bg-green-50 text-green-600">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.82,11.69,4.82,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" fill="currentColor"/>
@@ -330,7 +601,20 @@ data-testid="header"
                                                 </a>
                                             </li>
                                             <li class="section-item">
-                                                <a class="section-link" href="#">
+                                                <a class="section-link" href="/dashboard/billing">
+                                                    <div class="section-icon bg-yellow-50 text-yellow-600">
+                                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M20 4H4c-1.11 0-1.99.89-1.99 2L2 18c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z" fill="currentColor"/>
+                                                        </svg>
+                                                    </div>
+                                                    <div>
+                                                        <div class="section-label"><span>付款設定</span></div>
+                                                        <div class="section-desc">管理付款方式和帳單</div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="section-item">
+                                                <a class="section-link" href="/dashboard/workflows">
                                                     <div class="section-icon bg-orange-50 text-orange-600">
                                                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                             <path d="M8.99996 23.66L20.54 9.90997H15V0.159973L3.45996 13.91H8.99996V23.66Z" fill="currentColor"/>
@@ -454,3 +738,248 @@ data-testid="header"
     </div>
 </div>
 </header>
+
+<style>
+/* 基礎樣式 */
+.nav-link {
+  @apply flex items-center gap-1.5 py-2.5 px-2 text-sm text-header-text-secondary rounded no-underline outline-none;
+  @apply hover:bg-header-button-hover focus-visible:bg-header-button-hover;
+  @apply focus-visible:outline-2 focus-visible:outline-header-link-focus focus-visible:outline-offset-0.5;
+}
+
+/* 按鈕樣式 */
+.btn-primary {
+  @apply h-9 px-3 inline-flex items-center justify-center bg-primary-500 text-white font-semibold text-sm no-underline rounded-[18px] box-border transition-colors duration-250;
+  @apply hover:bg-accent-amber;
+}
+
+.auth-button > a[data-size="large"] {
+  @apply h-11 rounded-[22px];
+}
+
+/* ==== 下拉選單基礎樣式 ==== */
+.dropdown-summary {
+  @apply flex relative items-center py-2.5 px-2 pl-2.5 text-sm text-header-text-secondary rounded list-none cursor-pointer outline-none;
+  @apply hover:bg-header-button-hover focus-visible:bg-header-button-hover;
+  line-height:16px;
+}
+.dropdown-summary::-webkit-details-marker {
+  @apply hidden;
+}
+.dropdown-summary::-webkit-details-maker {
+    @apply hidden;
+}
+/* 底部指示線動畫 */
+.dropdown-summary::after {
+    content:"";
+    @apply h-1 bg-header-dropdown-indicator w-0 absolute left-0 trasistion-all ease-in-out;
+    bottom: -9.5px;
+    trasition-duration: 0.25s;
+}
+.dropdown-container[open] .dropdown-summary::after {
+    @apply w-full;
+}
+
+/* ==== 箭頭旋轉動畫 ==== */
+.dropdown-indicator {
+  @apply flex ml-1 transition-transform duration-250 ease-in-out;
+}
+
+.dropdown-container[open] .dropdown-indicator {
+  @apply rotate-180;
+}
+
+/* 下拉選單面板樣式 */
+.dropdown-panel {
+  @apply w-full grid grid-cols-[auto_1fr] absolute top-14 left-0 bg-header-dropdown-bg border-b border-header-border content-around justify-center;
+}
+
+.dropdown-container[open] .dropdown-panel::after {
+  content: "";
+  @apply fixed left-0 right-0 h-screen bg-header-dropdown-overlay -z-10 pointer-events-none;
+}
+
+.dropdown-main {
+  @apply w-full min-w-[50vw];
+}
+
+.dropdown-main:only-child {
+  @apply col-span-2;
+}
+
+.dropdown-content {
+  @apply py-8 px-10 box-border;
+}
+
+@media (min-width: 1280px) {
+  .dropdown-content {
+    @apply py-8 pr-16 pl-40;
+  }
+}
+
+.dropdown-aside {
+  @apply min-w-64 py-8 px-6 flex flex-col gap-12 bg-neutral-50;
+}
+
+@media (min-width: 1280px) {
+  .dropdown-aside {
+    @apply px-10;
+  }
+}
+
+.dropdown-header {
+  @apply max-w-[512px] mb-10;
+}
+
+.dropdown-heading {
+  @apply text-[30px] font-semibold leading-none tracking-wide text-header-text-primary font-sans;
+
+}
+
+.dropdown-description {
+  @apply text-sm leading-4 text-header-text-secondary mt-2;
+}
+
+.dropdown-sections {
+  @apply flex gap-[72px];
+  justify-content: auto;
+}
+
+.dropdown-footer {
+  @apply py-5 px-10 border-t border-header-border;
+}
+
+@media (min-width: 1280px) {
+  .dropdown-footer {
+    @apply pl-40;
+  }
+}
+
+.footer-list {
+  @apply list-none flex gap-8;
+}
+
+.footer-link {
+  @apply flex gap-1.5 text-[13px] font-medium leading-none no-underline text-header-text-primary;
+  @apply hover:text-accent-amber focus-visible:outline-2 focus-visible:outline-header-link-focus focus-visible:outline-offset-1;
+}
+
+/* 區段樣式 */
+.section-heading,
+.aside-heading {
+  @apply text-sm font-semibold leading-none tracking-wide uppercase text-header-text-disabled mb-4 font-sans;
+
+}
+
+.aside-heading {
+  @apply text-[30px] tracking-wide text-header-text-primary mb-6 font-sans;
+  text-transform: none;
+}
+
+.section-list {
+  @apply flex flex-col gap-3 list-none;
+}
+
+.section-link {
+  @apply w-fit max-w-96 flex items-start gap-2 no-underline text-header-text-primary;
+  @apply focus-visible:outline-2 focus-visible:outline-header-link-focus focus-visible:outline-offset-1;
+}
+
+.section-icon {
+  @apply flex text-header-text-primary p-2.5 rounded-lg bg-neutral-50;
+}
+
+.section-icon[class*="bg-orange"] {
+  @apply bg-orange-50;
+}
+
+.section-icon[class*="bg-purple"] {
+  @apply bg-purple-50;
+}
+
+.section-item:not(:last-child) .section-icon {
+  @apply mb-2;
+}
+
+.section-label {
+  @apply flex gap-1.5 text-sm font-medium leading-5;
+}
+
+.section-link:hover .section-label {
+  @apply text-accent-amber;
+}
+
+.section-desc {
+  @apply text-[13px] leading-5 text-header-text-muted mt-1;
+}
+
+.section-link:hover .section-desc {
+  @apply underline;
+}
+
+.section-item:not(:last-child) .section-desc {
+  @apply mb-2;
+}
+
+.beta-tag {
+  @apply h-auto px-1 inline-flex items-center justify-center text-[13px] font-medium leading-5 text-center text-header-text-disabled border border-neutral-400 rounded-sm;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 桌面版下拉選單控制
+    const handleDropdownToggle = (event) => {
+        const target = event.target;
+
+        if (target.tagName === 'DETAILS' && target.hasAttribute('data-testid') && target.getAttribute('data-testid') === 'nav-dropdown') {
+            if (target.open) {
+                // 當前下拉選單剛剛被開啟，關閉其他桌面版下拉選單
+                const allDropdowns = document.querySelectorAll('details[data-testid="nav-dropdown"]');
+                allDropdowns.forEach(dropdown => {
+                    if (dropdown !== target && dropdown.open) {
+                        dropdown.open = false;
+                    }
+                });
+            }
+        }
+    };
+
+    // 點擊外部關閉功能
+    const handleClickOutside = (event) => {
+        const target = event.target;
+        const header = document.querySelector('header[data-testid="header"]');
+
+        if (header && !header.contains(target)) {
+            // 關閉所有下拉選單
+            const dropdowns = document.querySelectorAll('details[data-testid="nav-dropdown"][open]');
+            dropdowns.forEach(dropdown => {
+                dropdown.open = false;
+            });
+        }
+    };
+
+    // 鍵盤導航支援
+    const handleKeyDown = (event) => {
+        if (event.key === 'Escape') {
+            // 關閉所有下拉選單
+            const dropdowns = document.querySelectorAll('details[data-testid="nav-dropdown"][open]');
+            dropdowns.forEach(dropdown => {
+                dropdown.open = false;
+            });
+        }
+    };
+
+    // 添加事件監聽器
+    document.addEventListener('click', handleClickOutside);
+    document.addEventListener('keydown', handleKeyDown);
+
+    // 為桌面版下拉選單添加事件監聽器
+    const dropdowns = document.querySelectorAll('details[data-testid="nav-dropdown"]');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('toggle', handleDropdownToggle);
+    });
+
+    console.log('Header navigation initialized with', dropdowns.length, 'dropdowns');
+});
+</script>
