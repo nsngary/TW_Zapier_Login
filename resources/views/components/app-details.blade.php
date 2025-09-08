@@ -64,8 +64,8 @@
                 <div class="border-b border-gray-200 pb-8">
                     <h3 class="text-xl font-semibold text-gray-900 mb-6">常見整合範例</h3>
                     <div class="space-y-4">
-                        <div class="flex items-start space-x-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                            <div class="flex-shrink-0 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <div class="flex items-start space-x-4 p-4 bg-neutral-50 border border-neutral-200 rounded-xs">
+                            <div class="flex-shrink-0 w-10 h-10 bg-accent-ball rounded-xs flex items-center justify-center">
                                 <i class="fas fa-sync-alt text-white"></i>
                             </div>
                             <div>
@@ -74,8 +74,8 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4 p-4 bg-green-50 border border-green-200 rounded-lg">
-                            <div class="flex-shrink-0 w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
+                        <div class="flex items-start space-x-4 p-4 bg-neutral-50 border border-neutral-200 rounded-xs">
+                            <div class="flex-shrink-0 w-10 h-10 bg-accent-ball rounded-xs flex items-center justify-center">
                                 <i class="fas fa-bell text-white"></i>
                             </div>
                             <div>
@@ -84,8 +84,8 @@
                             </div>
                         </div>
                         
-                        <div class="flex items-start space-x-4 p-4 bg-purple-50 border border-purple-200 rounded-lg">
-                            <div class="flex-shrink-0 w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
+                        <div class="flex items-start space-x-4 p-4 bg-neutral-50 border border-neutral-200 rounded-xs">
+                            <div class="flex-shrink-0 w-10 h-10 bg-accent-ball rounded-xs flex items-center justify-center">
                                 <i class="fas fa-chart-bar text-white"></i>
                             </div>
                             <div>
@@ -150,7 +150,7 @@
             <div class="lg:col-span-1 mt-8 lg:mt-0">
                 <div class="space-y-6">
                     {{-- 快速資訊 --}}
-                    <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+                    <div class="bg-gray-50 border border-gray-200 rounded-xs p-6">
                         <h4 class="font-semibold text-gray-900 mb-4">快速資訊</h4>
                         <div class="space-y-3">
                             <div class="flex justify-between items-center">
@@ -178,18 +178,18 @@
                     </div>
 
                     {{-- 開始整合按鈕 --}}
-                    <div class="bg-gradient-to-r from-primary-500 to-primary-600 rounded-lg p-6 text-white">
+                    <div class="bg-gradient-to-r from-primary-500 to-primary-600 rounded-xs p-6 text-white">
                         <h4 class="font-semibold mb-2">準備開始？</h4>
                         <p class="text-sm text-primary-100 mb-4">立即建立您的第一個自動化工作流程</p>
                         <a href="{{ route('user.apps.integrations', $app->id) }}" 
-                           class="inline-flex items-center justify-center w-full px-4 py-2 bg-white text-primary-600 font-medium rounded-md hover:bg-primary-50 transition-colors duration-200">
+                           class="inline-flex items-center justify-center w-full px-4 py-2 bg-white text-primary-600 font-medium rounded-xs hover:bg-primary-50 transition-colors duration-200">
                             <i class="fas fa-rocket mr-2"></i>
                             開始整合
                         </a>
                     </div>
 
                     {{-- 需要協助 --}}
-                    <div class="bg-white border border-gray-200 rounded-lg p-6">
+                    <div class="bg-white border border-gray-200 rounded-xs p-6">
                         <h4 class="font-semibold text-gray-900 mb-3">需要協助？</h4>
                         <div class="space-y-3">
                             <a href="#" class="flex items-center text-sm text-gray-600 hover:text-primary-600 transition-colors">

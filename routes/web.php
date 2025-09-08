@@ -36,6 +36,15 @@ Route::prefix('user')->middleware('user.auth')->group(function () {
     Route::get('/apps', [UserAppsController::class, 'index'])->name('user.apps.index');
     Route::get('/apps/{id}', [UserAppsController::class, 'show'])->name('user.apps.show');
     Route::get('/apps/{id}/integrations', [UserAppsController::class, 'integrations'])->name('user.apps.integrations');
+
+    // 心願清單相關路由
+    Route::get('/cart', [UserAppsController::class, 'cart'])->name('user.cart.index');
+    Route::post('/cart/add', [UserAppsController::class, 'addToCart'])->name('user.cart.add');
+    Route::delete('/cart/remove', [UserAppsController::class, 'removeFromCart'])->name('user.cart.remove');
+
+    // 結帳相關路由
+    Route::get('/cart/checkout', [UserAppsController::class, 'checkout'])->name('user.cart.checkout');
+    Route::post('/cart/checkout', [UserAppsController::class, 'processCheckout'])->name('user.cart.process');
 });
 
 

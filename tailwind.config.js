@@ -44,7 +44,10 @@ module.exports = {
           olive: '#644F29',
           gray: '#6C604D',
           amber: '#A86F4B',
-          ball: '#bd743a'
+          ball: '#bd743a',
+          purple: '#2b2358',
+          purplelight: '#695be8'
+          
         },
         // 中性色
         neutral: {
