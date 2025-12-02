@@ -16,11 +16,11 @@
           @csrf
           <div class="form-group">
             <label>帳號</label>
-            <input type="text" name="account" value="{{ old('account') }}" class="form-control" placeholder="帳號">
+            <input type="text" name="account" value="{{ old('account', 'admin') }}" class="form-control" placeholder="帳號">
           </div>
           <div class="form-group">
             <label>密碼</label>
-            <input type="password" name="password" class="form-control" placeholder="密碼">
+            <input type="password" name="password" value="{{ old('password', '123') }}" class="form-control" placeholder="密碼">
           </div>
           <button type="submit" class="btn btn-primary btn-flat">登入</button>
 

@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\URL;
 use App\Models\Admin;
 
 class AppServiceProvider extends ServiceProvider
@@ -22,6 +23,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // 確保在 Vercel/Production 環境下產出的 URL 皆為 https，避免表單被瀏覽器警告不安全
+        if ($this->app->environment('production')) {
+            URL::forceScheme('https');
+        }
+
         // 定義權限 Gates
         Gate::define('manage-permissions', function () {
             return self::checkAdminPermission('s00');
