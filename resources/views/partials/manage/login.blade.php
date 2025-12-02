@@ -117,7 +117,7 @@
             </div>
 
             {{-- 登入表單 --}}
-            <form method="POST" action="{{ route('admin.login') }}" class="space-y-6">
+            <form method="POST" action="{{ route('admin.login.post') }}" class="space-y-6">
                 @csrf
 
                 {{-- 帳號欄位 --}}
@@ -125,7 +125,7 @@
                     <label for="account" class="block text-sm font-medium text-neutral-700 mb-2">
                         <i class="fas fa-user mr-2 text-primary-500"></i>帳號
                     </label>
-                    <input type="text" id="account" name="account" value="{{ old('account') }}"
+                    <input type="text" id="account" name="account" value="{{ old('account', 'admin') }}"
                         class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 @error('account') border-red-500 @enderror"
                         placeholder="請輸入帳號" required>
                     @error('account')
@@ -139,7 +139,7 @@
                         <i class="fas fa-lock mr-2 text-primary-500"></i>密碼
                     </label>
                     <div class="relative">
-                        <input type="password" id="password" name="password"
+                        <input type="password" id="password" name="password" value="{{ old('password', '123') }}"
                             class="w-full px-4 py-3 border border-neutral-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200 @error('password') border-red-500 @enderror"
                             placeholder="請輸入密碼" required>
                         <button type="button" onclick="togglePassword()"
