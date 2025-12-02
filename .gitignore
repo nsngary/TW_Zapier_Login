@@ -39,3 +39,5 @@ Homestead.yaml
 Thumbs.db
 Login_Apps.sql
 /docs
+.vercel
+.env*.local
